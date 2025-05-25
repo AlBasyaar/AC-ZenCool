@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenCool - Solusi Perawatan AC Terpercaya</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5e9', secondary: '#f59e0b' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <!-- Aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar fixed w-full z-50 py-4 px-6 md:px-12 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="text-3xl font-['Pacifico'] text-primary">ZenCool</a>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#beranda" class="text-gray-800 hover:text-primary font-medium">Beranda</a>
+        <a href="#layanan" class="text-gray-800 hover:text-primary font-medium">Harga Layanan</a>
+        <a href="#galeri" class="text-gray-800 hover:text-primary font-medium">Galeri</a>
+        <a href="#testimoni" class="text-gray-800 hover:text-primary font-medium">Testimoni</a>
+        <a href="#syarat" class="text-gray-800 hover:text-primary font-medium">Syarat & Ketentuan</a>
+        <a href="#kontak" class="text-gray-800 hover:text-primary font-medium">Kontak</a>
+        <a href="#kontak"
+          class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Hubungi
+          Kami</a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle"
+        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 focus:outline-none">
+        <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white absolute top-full left-0 w-full shadow-lg rounded-b-lg">
+      <div class="flex flex-col py-4 px-6 space-y-4">
+        <a href="#beranda" class="text-gray-800 hover:text-primary font-medium py-2">Beranda</a>
+        <a href="#layanan" class="text-gray-800 hover:text-primary font-medium py-2">Harga Layanan</a>
+        <a href="#galeri" class="text-gray-800 hover:text-primary font-medium py-2">Galeri</a>
+        <a href="#testimoni" class="text-gray-800 hover:text-primary font-medium py-2">Testimoni</a>
+        <a href="#syarat" class="text-gray-800 hover:text-primary font-medium py-2">Syarat & Ketentuan</a>
+        <a href="#kontak" class="text-gray-800 hover:text-primary font-medium py-2">Kontak</a>
+        <a href="#kontak"
+          class="bg-primary text-white px-6 py-3 !rounded-button font-medium text-center hover:bg-primary/90 transition whitespace-nowrap">Hubungi
+          Kami</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="beranda" class="hero-section min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6 md:px-12 w-full" data-aos="fade-down" data-aos-duration="1000">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">ZenCool <br><span
+            class="text-primary">Solusi Perawatan AC Terpercaya</span></h1>
+        <p class="text-lg md:text-xl text-gray-700 mb-8">Layanan perawatan dan perbaikan AC profesional dengan teknisi
+          berpengalaman. Kami menjamin kualitas dan kepuasan pelanggan dengan harga terbaik.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#kontak"
+            class="bg-primary text-white px-8 py-4 !rounded-button font-medium text-center hover:bg-primary/90 transition whitespace-nowrap">Konsultasi
+            Gratis</a>
+          <a href="#layanan"
+            class="bg-white text-primary border-2 border-primary px-8 py-4 !rounded-button font-medium text-center hover:bg-gray-50 transition whitespace-nowrap">Lihat
+            Layanan</a>
+        </div>
+      </div>
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-3xl font-bold text-primary mb-2">5000+</p>
+          <p class="text-gray-600">Pelanggan Puas</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-3xl font-bold text-primary mb-2">12+</p>
+          <p class="text-gray-600">Tahun Pengalaman</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-3xl font-bold text-primary mb-2">15 Jam</p>
+          <p class="text-gray-600">Layanan Admin</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-3xl font-bold text-primary mb-2">100%</p>
+          <p class="text-gray-600">Garansi Layanan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Layanan Section -->
+  <section id="layanan" class="py-20 bg-white">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Harga Layanan</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Berikut adalah daftar harga layanan kami. Kami menawarkan
+          berbagai layanan dengan harga kompetitif.</p>
+      </div>
+      <!-- Price List Image -->
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-right"
+        data-aos-duration="1000">
+        <img src="https://static.readdy.ai/image/9a81d394e48a43e562b46a15f7253147/90505614137fe7d537d2e045270782e4.png"
+          alt="Daftar Harga Service AC ZenCool" class="w-full object-contain" />
+        <div class="p-6 text-center">
+          <a href="#kontak"
+            class="inline-block bg-primary text-white px-8 py-3 !rounded-button font-medium text-center hover:bg-primary/90 transition whitespace-nowrap">Pesan
+            Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Galeri Section -->
+  <section id="galeri" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Galeri Pekerjaan Kami
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Lihat hasil kerja tim teknisi profesional kami dalam memberikan
+          layanan perawatan AC terbaik.
+        </p>
+      </div>
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button
+          class="bg-primary text-white px-6 py-2 !rounded-full font-medium hover:bg-primary/90 transition whitespace-nowrap"
+          data-category="all">Semua</button>
+        <button
+          class="bg-white text-gray-700 px-6 py-2 !rounded-full font-medium hover:bg-gray-100 transition whitespace-nowrap"
+          data-category="pembersihan">Pembersihan</button>
+        <button
+          class="bg-white text-gray-700 px-6 py-2 !rounded-full font-medium hover:bg-gray-100 transition whitespace-nowrap"
+          data-category="perbaikan">Perbaikan</button>
+        <button
+          class="bg-white text-gray-700 px-6 py-2 !rounded-full font-medium hover:bg-gray-100 transition whitespace-nowrap"
+          data-category="instalasi">Instalasi</button>
+        <button
+          class="bg-white text-gray-700 px-6 py-2 !rounded-full font-medium hover:bg-gray-100 transition whitespace-nowrap"
+          data-category="perawatan">Perawatan</button>
+      </div>
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-left"
+        data-aos-duration="1000">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="pembersihan">
+          <img src="../foto/Pembersihan ac Split.jpg" alt="Pembersihan AC" class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Pembersihan AC Split</h3>
+            <p class="text-gray-600 text-sm mt-1">Apartemen Sudirman, Jakarta</p>
+          </div>
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="perbaikan"
+          data-aos="fade-left" data-aos-duration="1000">
+          <img src="../foto/Perbaikan ac overhool.jpg" alt="Perbaikan AC" class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Perbaikan ac overhool</h3>
+            <p class="text-gray-600 text-sm mt-1">Perumahan Bintaro, Tangerang</p>
+          </div>
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="instalasi"
+          data-aos="fade-left" data-aos-duration="1000">
+          <img src="../foto/Instalasi ac.jpg" alt="Instalasi AC" class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Instalasi AC Baru</h3>
+            <p class="text-gray-600 text-sm mt-1">Kantor Menara Kuningan, Jakarta</p>
+          </div>
+        </div>
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="instalasi"
+          data-aos="fade-left" data-aos-duration="1000">
+          <img src="../foto/Pemeriksaan rutin.jpg" alt="Instalasi AC" class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Pemeriksaan Ruitn</h3>
+            <p class="text-gray-600 text-sm mt-1">Mall Grand Indonesia, Jakarta</p>
+          </div>
+        </div>
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="pembersihan"
+          data-aos="fade-left" data-aos-duration="1000">
+          <img src="../foto/Pembersihan Outdoor.jpg" alt="Pembersihan Mendalam"
+            class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Pembersihan Outdoor</h3>
+            <p class="text-gray-600 text-sm mt-1">Hotel Mulia, Jakarta</p>
+          </div>
+        </div>
+        <!-- Gallery Item 6 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="perawatan"
+          data-aos="fade-left" data-aos-duration="1000">
+          <img src="../foto/Pengisian Freon.jpg" alt="Pengisian Freon" class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Pengisian Freon</h3>
+            <p class="text-gray-600 text-sm mt-1">Rumah Sakit Medistra, Jakarta</p>
+          </div>
+        </div>
+        <!-- Gallery Item 7 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="perawatan"
+          data-aos="fade-left" data-aos-duration="1000">
+          <img src="../foto/Pengelasan evapulator.jpg" alt="Diagnosa Kerusakan"
+            class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Pengelasan evapulator</h3>
+            <p class="text-gray-600 text-sm mt-1">Apartemen Kemang Village, Jakarta</p>
+          </div>
+        </div>
+        <!-- Gallery Item 8 -->
+        <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="perbaikan"
+          data-aos="fade-left" data-aos-duration="1000">
+          <img src="../foto/Penggantian Kapasitor.jpg" alt="Penggantian Komponen"
+            class="w-full h-56 object-cover object-top">
+          <div class="p-4">
+            <h3 class="font-medium text-gray-900">Penggantian Kapasitor</h3>
+            <p class="text-gray-600 text-sm mt-1">Kantor BCA, Jakarta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimoni Section -->
+  <section id="testimoni" class="py-20 bg-white">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Apa Kata Pelanggan Kami</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Kepuasan pelanggan adalah prioritas utama kami. Lihat apa
+          yang dikatakan pelanggan tentang layanan kami.</p>
+      </div>
+
+      <!-- Testimonial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-white rounded-lg shadow-md p-6 border border-gray-100" data-aos="zoom-in-down"
+          data-aos-duration="1000">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+              <img src="https://public.readdy.ai/ai/img_res/e95895467675e3a1f787fed7807f26e9.jpg" alt="Budi Santoso"
+                class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-900">Budi Santoso</h4>
+              <p class="text-gray-600 text-sm">Jakarta Selatan</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 mb-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-700">"Teknisi dari ZenCool sangat profesional dan tepat waktu. AC saya yang sudah
+            tidak dingin kembali seperti baru setelah diservis. Mereka juga memberikan tips perawatan yang sangat
+            berguna. Pasti akan menggunakan jasa mereka lagi!"</p>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-white rounded-lg shadow-md p-6 border border-gray-100" data-aos="zoom-in-down"
+          data-aos-duration="1000">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+              <img src="https://public.readdy.ai/ai/img_res/660f41a74c877d0b675ffb36a0fa65b6.jpg" alt="Siti Rahayu"
+                class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-900">Siti Rahayu</h4>
+              <p class="text-gray-600 text-sm">Tangerang</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 mb-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-700">"Saya sangat puas dengan layanan ZenCool. Mereka merespons dengan cepat saat AC
+            kantor kami bermasalah. Teknisinya ramah, kompeten, dan memberikan solusi yang tepat. Harganya juga sangat
+            kompetitif dibandingkan penyedia jasa lainnya."</p>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-white rounded-lg shadow-md p-6 border border-gray-100" data-aos="zoom-in-down"
+          data-aos-duration="1000">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+              <img src="https://public.readdy.ai/ai/img_res/e1ad75ca7780910be599678ddf5921a8.jpg" alt="Hendra Wijaya"
+                class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-900">Hendra Wijaya</h4>
+              <p class="text-gray-600 text-sm">Bekasi</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 mb-3">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-700">"Sudah 3 tahun langganan ZenCool untuk maintenance AC di rumah. Selalu puas
+            dengan hasilnya. AC jadi lebih awet dan jarang bermasalah. Teknisinya juga selalu menjelaskan dengan detail
+            apa yang mereka kerjakan. Sangat direkomendasikan!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Syarat dan Ketentuan Section -->
+  <section id="syarat" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Syarat dan Ketentuan
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Informasi penting mengenai layanan kami. Silakan baca dengan seksama
+          sebelum menggunakan jasa kami.
+        </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto">
+        <!-- Accordion Items -->
+        <div class="space-y-4">
+          <!-- Item 1 -->
+          <div class="border border-gray-200 rounded">
+            <button
+              class="flex justify-between items-center w-full px-6 py-4 text-left font-medium text-gray-900 hover:bg-gray-50 focus:outline-none">
+              <span>Layanan dan Jaminan</span>
+              <i class="ri-arrow-down-s-line ri-lg"></i>
+            </button>
+            <div class="px-6 py-4 border-t border-gray-200" data-aos="fade-down" data-aos-duration="1000">
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Semua layanan kami memiliki garansi selama 30 hari untuk
+                    pekerjaan yang dilakukan.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Jika terjadi masalah dalam 30 hari setelah service, kami
+                    akan memperbaikinya tanpa biaya tambahan.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Garansi tidak berlaku jika kerusakan disebabkan oleh
+                    faktor eksternal seperti bencana alam, tegangan listrik
+                    tidak stabil, atau modifikasi yang dilakukan oleh pihak
+                    lain.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Penggantian suku cadang memiliki garansi sesuai dengan
+                    ketentuan dari produsen suku cadang tersebut.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="border border-gray-200 rounded">
+            <button
+              class="flex justify-between items-center w-full px-6 py-4 text-left font-medium text-gray-900 hover:bg-gray-50 focus:outline-none">
+              <span>Pembayaran</span>
+              <i class="ri-arrow-down-s-line ri-lg"></i>
+            </button>
+            <div class="px-6 py-4 border-t border-gray-200 hidden" data-aos="fade-down" data-aos-duration="1000">
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Pembayaran dapat dilakukan dengan tunai atau transfer bank.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Invoice akan dikirimkan melalui email setelah pembayaran
+                    selesai.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="border border-gray-200 rounded">
+            <button
+              class="flex justify-between items-center w-full px-6 py-4 text-left font-medium text-gray-900 hover:bg-gray-50 focus:outline-none">
+              <span>Jadwal dan Pembatalan</span>
+              <i class="ri-arrow-down-s-line ri-lg"></i>
+            </button>
+            <div class="px-6 py-4 border-t border-gray-200 hidden" data-aos="fade-down" data-aos-duration="1000">
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Jadwal layanan dapat dibuat melalui telepon, WhatsApp,
+                    atau website kami.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Teknisi kami akan tiba dalam rentang waktu 2 jam dari
+                    jadwal yang ditentukan. Jika terjadi keterlambatan, kami
+                    akan menginformasikan kepada Anda.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Pembatalan dapat dilakukan minimal 24 jam sebelum jadwal
+                    layanan tanpa biaya.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+                  <span>Pembatalan kurang dari 24 jam akan dikenakan biaya
+                    administrasi sebesar Rp 50.000.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Kontak Section -->
+  <section id="kontak" class="py-20 bg-white">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Butuh bantuan atau ingin mendapatkan penawaran? Hubungi kami
+          melalui form di bawah ini atau melalui kontak yang tersedia.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- Contact Form -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <div class="bg-white rounded-lg shadow-md p-8" data-aos="zoom-out-right" data-aos-duration="1000">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Kirim Pesan</h3>
+          <form id="contact-form" onsubmit="sendWhatsApp()">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
+                <input required type="text" id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Masukkan nama lengkap">
+              </div>
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-2">Nomor Telepon</label>
+                <input required="tel" id="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Masukkan nomor telepon">
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="address" class="block text-gray-700 font-medium mb-2">Alamat</label>
+              <input required="text" id="address"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                placeholder="Masukkan alamat lengkap">
+            </div>
+            <div class="mb-6">
+              <label for="service" class="block text-gray-700 font-medium mb-2">Layanan yang Dibutuhkan</label>
+              <div class="relative">
+                <select id="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary appearance-none pr-8">
+                  <option value="" disabled selected>Pilih layanan</option>
+                  <option value="cleaning">Service AC</option>
+                  <option value="repair">Cuci AC</option>
+                </select>
+                <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <i class="ri-arrow-down-s-line text-gray-500"></i>
+                </div>
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="date" class="block text-gray-700 font-medium mb-2">Tanggal Kunjungan</label>
+              <input required type="date" id="date"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
+              <textarea required id="message" rows="4"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                placeholder="Tuliskan pesan atau pertanyaan Anda"></textarea>
+            </div>
+            <div class="mb-6 flex items-start">
+              <input type="checkbox" id="terms" class="custom-checkbox mr-3 mt-1">
+              <label for="terms" class="text-gray-700">Saya menyetujui <a href="#syarat"
+                  class="text-primary hover:underline">syarat dan ketentuan</a> yang berlaku</label>
+            </div>
+            <button type="submit"
+              class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Kirim
+              Pesan</button>
+          </form>
+        </div>
+        <script>
+          const name = document.getElementById('name');
+          const phone = document.getElementById('phone');
+          const address = document.getElementById('address');
+          const service = document.getElementById('service');
+          const date = document.getElementById('date');
+          const message = document.getElementById('message');
+
+          function sendWhatsApp() {
+            const whatsappNumber = '6281382294790';
+            const whatsAppMessage = `Halo, saya ${name.value} dari ${address.value}. Saya ingin menghubungi Anda untuk informasi lebih lanjut tentang ${service.value}. Silakan hubungi saya di ${phone.value}. Pesan tambahan: ${message.value}. Terima kasih!`;
+
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
+            window.open(whatsappURL, '_blank');
+          }
+        </script>
+        <!-- Contact -->
+        <div>
+          <div class="bg-white rounded-lg shadow-md p-8 mb-8" data-aos="zoom-out-left" data-aos-duration="1000">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Informasi Kontak</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">Alamat</h4>
+                  <p class="text-gray-700">Jl. Gang Bona 3 No. 103, Jakarta Timur, Cakung13940</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">Telepon</h4>
+                  <p class="text-gray-700">+62 813 8229 4790(WhatsApp)</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">Email</h4>
+                  <p class="text-gray-700">aczencool@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">Jam Operasional</h4>
+                  <p class="text-gray-700">Senin - Jumat: 08.00 - 17.00</p>
+                  <p class="text-gray-700">Sabtu: 08.00 - 17.00</p>
+                  <p class="text-gray-700">Minggu: 08.00 - 17.00</p>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900 mb-3">Ikuti Kami</h4>
+                <div class="flex space-x-4">
+                  <a href="https://www.facebook.com/profile.php?id=61575283144849"
+                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                  <a href="https://www.instagram.com/ac_zencool/"
+                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
+                    <i class="ri-instagram-fill"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ac.zencool?lang=en"
+                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
+                    <i class="ri-tiktok-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Company Info -->
+        <div>
+          <a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">ZenCool</a>
+          <p class="text-gray-400 mb-6">Solusi terpercaya untuk semua kebutuhan perawatan dan perbaikan AC Anda. Kami
+            menyediakan layanan profesional dengan teknisi berpengalaman.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/profile.php?id=61575283144849"
+              class="text-gray-400 hover:text-white transition">
+              <i class="ri-facebook-fill ri-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/ac_zencool/" class="text-gray-400 hover:text-white transition">
+              <i class="ri-instagram-fill ri-lg"></i>
+            </a>
+            </a>
+            <a href="https://www.tiktok.com/@ac.zencool?lang=en" class="text-gray-400 hover:text-white transition">
+              <i class="ri-tiktok-fill ri-lg"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Tautan Cepat</h4>
+          <ul class="space-y-3">
+            <li><a href="#beranda" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+            <li><a href="#layanan" class="text-gray-400 hover:text-white transition">Harga Layanan</a></li>
+            <li><a href="#galeri" class="text-gray-400 hover:text-white transition">Galeri</a></li>
+            <li><a href="#testimoni" class="text-gray-400 hover:text-white transition">Testimoni</a></li>
+            <li><a href="#syarat" class="text-gray-400 hover:text-white transition">Syarat & Ketentuan</a></li>
+            <li><a href="#kontak" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Layanan Kami</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Pembersihan AC</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Perbaikan AC</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Instalasi AC Baru</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Penambahan Freon</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Kontrak Maintenance</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Konsultasi AC</a></li>
+          </ul>
+        </div>
+        <!-- Newsletter -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Berlangganan</h4>
+          <p class="text-gray-400 mb-4">Dapatkan informasi terbaru dan penawaran spesial dari kami.</p>
+          <form class="mb-4">
+            <div class="flex">
+              <input type="email" placeholder="Alamat email Anda"
+                class="w-full px-4 py-3 rounded-l border-none focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-900">
+              <button type="submit"
+                class="bg-primary text-white px-4 py-3 !rounded-r-button hover:bg-primary/90 transition whitespace-nowrap">Daftar</button>
+            </div>
+          </form>
+          <p class="text-gray-400 text-sm">Dengan berlangganan, Anda menyetujui <a href="#"
+              class="text-primary hover:underline">kebijakan privasi</a> kami.</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 ZenCool. Hak Cipta Dilindungi.</p>
+          <div class="flex items-center space-x-6">
+            <span class="text-gray-400">Metode Pembayaran:</span>
+            <div class="flex space-x-3">
+              <i class="ri-visa-fill ri-lg text-gray-400"></i>
+              <i class="ri-mastercard-fill ri-lg text-gray-400"></i>
+              <i class="ri-bank-card-fill ri-lg text-gray-400"></i>
+              <i class="ri-alipay-fill ri-lg text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
