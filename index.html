@@ -424,15 +424,20 @@
     <div class="container mx-auto px-6 md:px-12">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Butuh bantuan atau ingin mendapatkan penawaran? Hubungi kami
-          melalui form di bawah ini atau melalui kontak yang tersedia.</p>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Butuh bantuan atau ingin mendapatkan penawaran? Hubungi kami melalui form di bawah ini atau melalui kontak
+          yang tersedia.
+        </p>
       </div>
+
+      <!-- Grid Layout: Form (kiri) dan Kontak (kanan) -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-        <!-- Contact Form -->
+
+        <!-- Formulir Kontak -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <div class="bg-white rounded-lg shadow-md p-8" data-aos="zoom-out-right" data-aos-duration="1000">
           <h3 class="text-2xl font-bold text-gray-900 mb-6">Kirim Pesan</h3>
-          <form id="contact-form" onsubmit="sendWhatsApp()">
+          <form id="contact-form" onsubmit="event.preventDefault(); sendWhatsApp();">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
@@ -442,14 +447,14 @@
               </div>
               <div>
                 <label for="phone" class="block text-gray-700 font-medium mb-2">Nomor Telepon</label>
-                <input required="tel" id="phone"
+                <input required type="tel" id="phone"
                   class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
                   placeholder="Masukkan nomor telepon">
               </div>
             </div>
             <div class="mb-6">
               <label for="address" class="block text-gray-700 font-medium mb-2">Alamat</label>
-              <input required="text" id="address"
+              <input required type="text" id="address"
                 class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
                 placeholder="Masukkan alamat lengkap">
             </div>
@@ -472,97 +477,155 @@
               <input required type="date" id="date"
                 class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
             </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label for="day" class="block text-gray-700 font-medium mb-2">Hari Kunjungan</label>
+                <input type="text" id="day"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Contoh: Senin">
+              </div>
+              <div>
+                <label for="time" class="block text-gray-700 font-medium mb-2">Jam Kunjungan</label>
+                <input type="text" id="time"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Contoh: 08.00">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label for="acCount" class="block text-gray-700 font-medium mb-2">Jumlah AC</label>
+                <input type="number" id="acCount"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Contoh: 1">
+              </div>
+              <div>
+                <label for="problem" class="block text-gray-700 font-medium mb-2">Permasalahan AC</label>
+                <input type="text" id="problem"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Contoh: Kurang bersih saja">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label for="promoSource" class="block text-gray-700 font-medium mb-2">Sumber Tahu Promo</label>
+                <input type="text" id="promoSource"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Contoh: IG Post">
+              </div>
+              <div>
+                <label for="shareLoc" class="block text-gray-700 font-medium mb-2">Link Share Location</label>
+                <input type="text" id="shareLoc"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Paste link Google Maps di sini (jika ada)">
+              </div>
+            </div>
             <div class="mb-6">
-              <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
-              <textarea required id="message" rows="4"
+              <label for="message" class="block text-gray-700 font-medium mb-2">Pesan Tambahan</label>
+              <textarea id="message" rows="4"
                 class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                placeholder="Tuliskan pesan atau pertanyaan Anda"></textarea>
+                placeholder="Tuliskan pesan atau pertanyaan Anda (opsional)"></textarea>
             </div>
             <div class="mb-6 flex items-start">
-              <input type="checkbox" id="terms" class="custom-checkbox mr-3 mt-1">
+              <input type="checkbox" id="terms" class="custom-checkbox mr-3 mt-1" required>
               <label for="terms" class="text-gray-700">Saya menyetujui <a href="#syarat"
                   class="text-primary hover:underline">syarat dan ketentuan</a> yang berlaku</label>
             </div>
             <button type="submit"
-              class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Kirim
-              Pesan</button>
+              class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">
+              Kirim Pesan via WhatsApp
+            </button>
           </form>
+          <script>
+            function sendWhatsApp() {
+              const name = document.getElementById('name').value;
+              const phone = document.getElementById('phone').value;
+              const address = document.getElementById('address').value;
+              const service = document.getElementById('service').value;
+              const date = document.getElementById('date').value;
+              const message = document.getElementById('message').value || '(tidak ada)';
+              const time = document.getElementById('time')?.value || '-';
+              const day = document.getElementById('day')?.value || '-';
+              const problem = document.getElementById('problem')?.value || '-';
+              const acCount = document.getElementById('acCount')?.value || '-';
+              const promoSource = document.getElementById('promoSource')?.value || '-';
+              const shareLoc = document.getElementById('shareLoc')?.value || '(belum tersedia)';
+
+              const whatsappNumber = '6281382294790';
+              const whatsAppMessage =
+                `Halo Admin Zencool,\n\n` +
+                `Saya *${name}* dari *${address}* ingin menghubungi Anda untuk informasi lebih lanjut mengenai layanan *${service === 'cleaning' ? 'Service AC' : 'Cuci AC'}*.\n\n` +
+                `Nomor Telepon : ${phone}\n` +
+                `Hari Kunjungan : ${day}\n` +
+                `Jam Kunjungan : ${time}\n` +
+                `Tanggal Kunjungan : ${date}\n` +
+                `Share Loc : ${shareLoc}\n` +
+                `Problem AC : ${problem}\n` +
+                `Jumlah AC : ${acCount}\n` +
+                `Mengetahui Promo dari : ${promoSource}\n` +
+                `Pesan Tambahan : ${message}\n\n` +
+                `Terima kasih!`;
+
+              const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
+              window.open(whatsappURL, '_blank');
+            }
+          </script>
         </div>
-        <script>
-          const name = document.getElementById('name');
-          const phone = document.getElementById('phone');
-          const address = document.getElementById('address');
-          const service = document.getElementById('service');
-          const date = document.getElementById('date');
-          const message = document.getElementById('message');
 
-          function sendWhatsApp() {
-            const whatsappNumber = '6281382294790';
-            const whatsAppMessage = `Halo, saya ${name.value} dari ${address.value}. Saya ingin menghubungi Anda untuk informasi lebih lanjut tentang ${service.value}. Silakan hubungi saya di ${phone.value}. Pesan tambahan: ${message.value}. Terima kasih!`;
-
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
-            window.open(whatsappURL, '_blank');
-          }
-        </script>
-        <!-- Contact -->
-        <div>
-          <div class="bg-white rounded-lg shadow-md p-8 mb-8" data-aos="zoom-out-left" data-aos-duration="1000">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">Informasi Kontak</h3>
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <i class="ri-map-pin-line text-primary"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900 mb-1">Alamat</h4>
-                  <p class="text-gray-700">Jl. Gang Bona 3 No. 103, Jakarta Timur, Cakung13940</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <i class="ri-phone-line text-primary"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900 mb-1">Telepon</h4>
-                  <p class="text-gray-700">+62 813 8229 4790(WhatsApp)</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <i class="ri-mail-line text-primary"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900 mb-1">Email</h4>
-                  <p class="text-gray-700">aczencool@gmail.com</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <i class="ri-time-line text-primary"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium text-gray-900 mb-1">Jam Operasional</h4>
-                  <p class="text-gray-700">Senin - Jumat: 08.00 - 17.00</p>
-                  <p class="text-gray-700">Sabtu: 08.00 - 17.00</p>
-                  <p class="text-gray-700">Minggu: 08.00 - 17.00</p>
-                </div>
+        <!-- Informasi Kontak -->
+        <div class="w-full md:w-full bg-white rounded-lg shadow-md p-6 md:p-8 self-start" data-aos="zoom-out-left" data-aos-duration="1000">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Informasi Kontak</h3>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-map-pin-line text-primary"></i>
               </div>
               <div>
-                <h4 class="font-medium text-gray-900 mb-3">Ikuti Kami</h4>
-                <div class="flex space-x-4">
-                  <a href="https://www.facebook.com/profile.php?id=61575283144849"
-                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
-                    <i class="ri-facebook-fill"></i>
-                  </a>
-                  <a href="https://www.instagram.com/ac_zencool/"
-                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
-                    <i class="ri-instagram-fill"></i>
-                  </a>
-                  <a href="https://www.tiktok.com/@ac.zencool?lang=en"
-                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
-                    <i class="ri-tiktok-fill"></i>
-                  </a>
-                </div>
+                <h4 class="font-medium text-gray-900 mb-1">Alamat</h4>
+                <p class="text-gray-700">Jl. Gang Bona 3 No. 103, Jakarta Timur, Cakung 13940</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-phone-line text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900 mb-1">Telepon</h4>
+                <p class="text-gray-700">+62 813 8229 4790 (WhatsApp)</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-mail-line text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900 mb-1">Email</h4>
+                <p class="text-gray-700">aczencool@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-time-line text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900 mb-1">Jam Operasional</h4>
+                <p class="text-gray-700">Senin - Minggu: 08.00 - 17.00</p>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-900 mb-3">Ikuti Kami</h4>
+              <div class="flex space-x-4">
+                <a href="https://www.facebook.com/profile.php?id=61575283144849"
+                  class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/ac_zencool/"
+                  class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
+                  <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ac.zencool?lang=en"
+                  class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-blue-200 transition">
+                  <i class="ri-tiktok-fill"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -570,6 +633,7 @@
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-white pt-16 pb-8">
     <div class="container mx-auto px-6 md:px-12">
@@ -636,14 +700,6 @@
       <div class="border-t border-gray-800 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 ZenCool. Hak Cipta Dilindungi.</p>
-          <div class="flex items-center space-x-6">
-            <span class="text-gray-400">Metode Pembayaran:</span>
-            <div class="flex space-x-3">
-              <i class="ri-visa-fill ri-lg text-gray-400"></i>
-              <i class="ri-mastercard-fill ri-lg text-gray-400"></i>
-              <i class="ri-bank-card-fill ri-lg text-gray-400"></i>
-              <i class="ri-alipay-fill ri-lg text-gray-400"></i>
-            </div>
           </div>
         </div>
       </div>
