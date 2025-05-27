@@ -24,7 +24,7 @@
   <!-- Navbar -->
   <nav id="navbar" class="navbar fixed w-full z-50 py-4 px-6 md:px-12 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-3xl font-['Pacifico'] text-primary">ZenCool</a>
+      <a href="#" id="logo" class="text-3xl font-['Pacifico'] text-primary">ZenCool</a>
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
         <a href="#beranda" class="text-gray-800 hover:text-primary font-medium">Beranda</a>
@@ -60,9 +60,9 @@
     </div>
   </nav>
   <!-- Hero Section -->
-  <section id="beranda" class="hero-section min-h-screen flex items-center pt-20 bg-white">
+  <section id="beranda" class="hero-section pt-20 bg-white">
     <div class="w-full px-6 md:px-12">
-      <div class="max-w-7xl mx-auto" data-aos="fade-down" data-aos-duration="1000">
+      <div class="max-w-7xl mx-auto" data-aos="fade-down" data-aos-duration="2000">
         <div class="max-w-2xl">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 break-words">
             ZenCool <br>
@@ -72,7 +72,7 @@
             Layanan perawatan dan perbaikan AC profesional dengan teknisi berpengalaman. Kami menjamin kualitas dan
             kepuasan pelanggan dengan harga terbaik.
           </p>
-          <p class="text-lg md:text-xl text-gray-700 mb-8">
+          <p class="text-lg md:text-xl text-gray-700 mb-8 font-semibold">
             Zen – Mengacu pada filosofi Zen yang berasal dari Buddhisme Jepang, sering dikaitkan dengan ketenangan,
             kesederhanaan, keseimbangan, dan kedamaian batin. Dalam konteks merek, kata “Zen” bisa memberi kesan bahwa
             produk ini memberikan ketenangan, kenyamanan, dan suasana yang damai di rumah atau ruangan pengguna.
@@ -111,7 +111,7 @@
   </section>
   <!-- Layanan Section -->
   <section id="layanan" class="py-20 bg-white">
-    <div class="container mx-auto px-6 md:px-12">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Harga Layanan</h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">Berikut adalah daftar harga layanan kami. Kami menawarkan
@@ -119,7 +119,7 @@
       </div>
       <!-- Price List Image -->
       <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-right"
-        data-aos-duration="1000">
+        data-aos-duration="2000">
         <img src="https://static.readdy.ai/image/9a81d394e48a43e562b46a15f7253147/90505614137fe7d537d2e045270782e4.png"
           alt="Daftar Harga Service AC ZenCool" class="w-full object-contain" />
         <div class="p-6 text-center">
@@ -132,7 +132,7 @@
   </section>
   <!-- Galeri Section -->
   <section id="galeri" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-12">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Galeri Pekerjaan Kami
@@ -162,7 +162,7 @@
       </div>
       <!-- Gallery Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-left"
-        data-aos-duration="1000">
+        data-aos-duration="2000">
         <!-- Gallery Item 1 -->
         <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="pembersihan">
           <img src="../foto/Pembersihan ac Split.jpg" alt="Pembersihan AC" class="w-full h-56 object-cover object-top">
@@ -182,7 +182,7 @@
         </div>
         <!-- Gallery Item 3 -->
         <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="instalasi"
-          data-aos="fade-left" data-aos-duration="1000">
+          data-aos="fade-left" data-aos-duration="2000">
           <img src="../foto/Instalasi ac.jpg" alt="Instalasi AC" class="w-full h-56 object-cover object-top">
           <div class="p-4">
             <h3 class="font-medium text-gray-900">Instalasi AC Baru</h3>
@@ -191,7 +191,7 @@
         </div>
         <!-- Gallery Item 4 -->
         <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="instalasi"
-          data-aos="fade-left" data-aos-duration="1000">
+          data-aos="fade-left" data-aos-duration="2000">
           <img src="../foto/Pemeriksaan rutin.jpg" alt="Instalasi AC" class="w-full h-56 object-cover object-top">
           <div class="p-4">
             <h3 class="font-medium text-gray-900">Pemeriksaan Ruitn</h3>
@@ -200,7 +200,7 @@
         </div>
         <!-- Gallery Item 5 -->
         <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="pembersihan"
-          data-aos="fade-left" data-aos-duration="1000">
+          data-aos="fade-left" data-aos-duration="2000">
           <img src="../foto/Pembersihan Outdoor.jpg" alt="Pembersihan Mendalam"
             class="w-full h-56 object-cover object-top">
           <div class="p-4">
@@ -210,7 +210,7 @@
         </div>
         <!-- Gallery Item 6 -->
         <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="perawatan"
-          data-aos="fade-left" data-aos-duration="1000">
+          data-aos="fade-left" data-aos-duration="2000">
           <img src="../foto/Pengisian Freon.jpg" alt="Pengisian Freon" class="w-full h-56 object-cover object-top">
           <div class="p-4">
             <h3 class="font-medium text-gray-900">Pengisian Freon</h3>
@@ -219,7 +219,7 @@
         </div>
         <!-- Gallery Item 7 -->
         <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="perawatan"
-          data-aos="fade-left" data-aos-duration="1000">
+          data-aos="fade-left" data-aos-duration="2000">
           <img src="../foto/Pengelasan evapulator.jpg" alt="Diagnosa Kerusakan"
             class="w-full h-56 object-cover object-top">
           <div class="p-4">
@@ -229,7 +229,7 @@
         </div>
         <!-- Gallery Item 8 -->
         <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden" data-category="perbaikan"
-          data-aos="fade-left" data-aos-duration="1000">
+          data-aos="fade-left" data-aos-duration="2000">
           <img src="../foto/Penggantian Kapasitor.jpg" alt="Penggantian Komponen"
             class="w-full h-56 object-cover object-top">
           <div class="p-4">
@@ -242,7 +242,7 @@
   </section>
   <!-- Testimoni Section -->
   <section id="testimoni" class="py-20 bg-white">
-    <div class="container mx-auto px-6 md:px-12">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Apa Kata Pelanggan Kami</h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">Kepuasan pelanggan adalah prioritas utama kami. Lihat apa
@@ -253,7 +253,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
         <!-- Testimonial 1 -->
         <div class="testimonial-card bg-white rounded-lg shadow-md p-6 border border-gray-100" data-aos="zoom-in-down"
-          data-aos-duration="1000">
+          data-aos-duration="2000">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
               <img src="https://public.readdy.ai/ai/img_res/e95895467675e3a1f787fed7807f26e9.jpg" alt="Budi Santoso"
@@ -277,7 +277,7 @@
         </div>
         <!-- Testimonial 2 -->
         <div class="testimonial-card bg-white rounded-lg shadow-md p-6 border border-gray-100" data-aos="zoom-in-down"
-          data-aos-duration="1000">
+          data-aos-duration="2000">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
               <img src="https://public.readdy.ai/ai/img_res/660f41a74c877d0b675ffb36a0fa65b6.jpg" alt="Siti Rahayu"
@@ -301,7 +301,7 @@
         </div>
         <!-- Testimonial 3 -->
         <div class="testimonial-card bg-white rounded-lg shadow-md p-6 border border-gray-100" data-aos="zoom-in-down"
-          data-aos-duration="1000">
+          data-aos-duration="2000">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
               <img src="https://public.readdy.ai/ai/img_res/e1ad75ca7780910be599678ddf5921a8.jpg" alt="Hendra Wijaya"
@@ -328,7 +328,7 @@
   </section>
   <!-- Syarat dan Ketentuan Section -->
   <section id="syarat" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-12">
+    <div class=" px-6 md:px-12">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Syarat dan Ketentuan
@@ -348,7 +348,7 @@
               <span>Layanan dan Jaminan</span>
               <i class="ri-arrow-down-s-line ri-lg"></i>
             </button>
-            <div class="px-6 py-4 border-t border-gray-200" data-aos="fade-down" data-aos-duration="1000">
+            <div class="px-6 py-4 border-t border-gray-200" data-aos="fade-down" data-aos-duration="2000">
               <ul class="space-y-2 text-gray-700">
                 <li class="flex items-start">
                   <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
@@ -382,7 +382,7 @@
               <span>Pembayaran</span>
               <i class="ri-arrow-down-s-line ri-lg"></i>
             </button>
-            <div class="px-6 py-4 border-t border-gray-200 hidden" data-aos="fade-down" data-aos-duration="1000">
+            <div class="px-6 py-4 border-t border-gray-200 hidden" data-aos="fade-down" data-aos-duration="2000">
               <ul class="space-y-2 text-gray-700">
                 <li class="flex items-start">
                   <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
@@ -403,7 +403,7 @@
               <span>Jadwal dan Pembatalan</span>
               <i class="ri-arrow-down-s-line ri-lg"></i>
             </button>
-            <div class="px-6 py-4 border-t border-gray-200 hidden" data-aos="fade-down" data-aos-duration="1000">
+            <div class="px-6 py-4 border-t border-gray-200 hidden" data-aos="fade-down" data-aos-duration="2000">
               <ul class="space-y-2 text-gray-700">
                 <li class="flex items-start">
                   <i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
@@ -434,7 +434,7 @@
   </section>
   <!-- Kontak Section -->
   <section id="kontak" class="py-20 bg-white">
-    <div class="container mx-auto px-6 md:px-12">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -665,7 +665,7 @@
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white pt-16 pb-8">
-    <div class="container mx-auto px-6 md:px-12">
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <!-- Company Info -->
         <div>
