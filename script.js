@@ -43,6 +43,7 @@ window.addEventListener('scroll', function () {
       });
     });
   });
+
   // Show first accordion by default
   if (accordionButtons.length > 0) {
     const firstAccordionContent = accordionButtons[0].nextElementSibling;
@@ -107,4 +108,22 @@ window.addEventListener('scroll', function () {
     });
   });
 
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+
+  // Tampilkan tombol saat scroll ke bawah
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollBtn.classList.add('show');
+    } else {
+      scrollBtn.classList.remove('show');
+    }
+  });
+
+  // Scroll ke atas saat tombol diklik
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 

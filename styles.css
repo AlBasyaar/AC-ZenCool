@@ -138,3 +138,28 @@ input:checked+.slider:before {
 .rotate-180 {
   transform: rotate(180deg);
 }
+
+#scrollToTopBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #4698e5;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 48px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}

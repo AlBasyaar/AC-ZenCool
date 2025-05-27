@@ -18,6 +18,9 @@
 </head>
 
 <body class="bg-gray-50">
+  <button id="scrollToTopBtn" title="Kembali ke atas">
+    ↑
+  </button>
   <!-- Navbar -->
   <nav id="navbar" class="navbar fixed w-full z-50 py-4 px-6 md:px-12 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -512,7 +515,7 @@
                 <label for="problem" class="block text-gray-700 font-medium mb-2">Permasalahan AC</label>
                 <input type="text" id="problem"
                   class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                  placeholder="Contoh: Kurang bersih saja">
+                  placeholder="Contoh: Kurang dingin">
               </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -526,7 +529,7 @@
                 <label for="shareLoc" class="block text-gray-700 font-medium mb-2">Link Share Location</label>
                 <input type="text" id="shareLoc"
                   class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                  placeholder="Paste link Google Maps di sini (jika ada)">
+                  placeholder="Paste link Google Maps di sini">
               </div>
             </div>
             <div class="mb-6">
@@ -551,7 +554,11 @@
               const phone = document.getElementById('phone').value;
               const address = document.getElementById('address').value;
               const service = document.getElementById('service').value;
-              const date = document.getElementById('date').value;
+
+              const rawDate = document.getElementById('date').value;
+              const dateObj = new Date(rawDate);
+              const date = `${dateObj.getDate().toString().padStart(2, '0')}-${(dateObj.getMonth() + 1).toString().padStart(2, '0')}-${dateObj.getFullYear()}`;
+
               const message = document.getElementById('message').value || '(tidak ada)';
               const time = document.getElementById('time')?.value || '-';
               const day = document.getElementById('day')?.value || '-';
@@ -561,6 +568,7 @@
               const shareLoc = document.getElementById('shareLoc')?.value || '(belum tersedia)';
 
               const whatsappNumber = '6281382294790';
+
               const whatsAppMessage =
                 `Halo Admin Zencool,\n\n` +
                 `Saya *${name}* dari *${address}* ingin menghubungi Anda untuk informasi lebih lanjut mengenai layanan *${service === 'cleaning' ? 'Service AC' : 'Cuci AC'}*.\n\n` +
@@ -640,6 +648,16 @@
               </div>
             </div>
           </div>
+          <!-- Lokasi Kami (Maps) -->
+          <div class="w-full md:w-full bg-white rounded-lg shadow-md p-6 md:p-8 self-start mt-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Lokasi Kami</h3>
+            <div class="w-full h-64 md:h-[32rem] rounded overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4307.224708325507!2d106.93602017535228!3d-6.215475593772452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c9fb441ac57%3A0x38b145fdb05562c0!2sGg.%20Bona%203%2C%20Penggilingan%2C%20Kec.%20Cakung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013940!5e1!3m2!1sid!2sid!4v1748267284613!5m2!1sid!2sid"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -665,6 +683,9 @@
             </a>
             <a href="https://www.tiktok.com/@ac.zencool?lang=en" class="text-gray-400 hover:text-white transition">
               <i class="ri-tiktok-fill ri-lg"></i>
+            </a>
+            <a href="https://github.com/AlBasyaar/aczencool.my.id" class="text-gray-400 hover:text-white transition">
+              <i class="ri-github-fill ri-lg"></i>
             </a>
           </div>
         </div>
