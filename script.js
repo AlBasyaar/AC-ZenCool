@@ -126,3 +126,25 @@ window.addEventListener('scroll', function () {
       behavior: 'smooth'
     });
   });
+
+  // Counter Animation
+   const counters = document.querySelectorAll('.counter');
+          const speed = 200; 
+
+          counters.forEach(counter => {
+            const animate = () => {
+              const value = +counter.getAttribute('data-target');
+              const data = +counter.innerText;
+
+              const increment = value / speed;
+
+              if (data < value) {
+                counter.innerText = Math.ceil(data + increment);
+                setTimeout(animate, 20);
+              } else {
+                counter.innerText = value + (counter.getAttribute('data-target').includes('%') ? '%' : '+');
+              }
+            };
+
+            animate();
+          });
