@@ -48,11 +48,11 @@ html, body {
 }
 
 .navbar.scrolled a {
-color: #1f2937;
+  color: #1f2937;
 }
 
 #logo {
-    color: #0ea5e9;
+  color: #0ea5e9;
 }
 
 /* Mobile menu background */
@@ -213,11 +213,11 @@ section {
   border-radius: 50%;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: #0ea5e9;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(30px);
 }
 
@@ -501,4 +501,13 @@ h1, h2, h3, h4, h5, h6, p {
   .testimonial-card:hover {
     transform: translateY(-6px);
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
 }
