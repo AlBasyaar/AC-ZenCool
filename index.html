@@ -708,25 +708,33 @@
         <!-- Newsletter -->
         <div>
           <h4 class="text-xl font-bold mb-6">Berlangganan</h4>
-          <p class="text-gray-400 mb-4">Dapatkan informasi terbaru dan penawaran spesial dari kami.</p>
-          <form class="mb-4">
+          <p class="text-gray-400 mb-4">
+            Dapatkan informasi terbaru dan penawaran spesial dari kami.
+          </p>
+
+          <form action="mailto:aczencool@gmail.com" method="post" enctype="text/plain" class="mb-4">
             <div class="flex">
-              <input type="email" placeholder="Alamat email Anda"
+              <input type="email" name="Email" placeholder="Alamat email Anda" required
                 class="w-full px-4 py-3 rounded-l border-none focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-900">
               <button type="submit"
-                class="bg-primary text-white px-4 py-3 !rounded-r-button hover:bg-primary/90 transition whitespace-nowrap">Daftar</button>
+                class="bg-primary text-white px-4 py-3 !rounded-r-button hover:bg-primary/90 transition whitespace-nowrap">
+                Daftar
+              </button>
             </div>
           </form>
-          <p class="text-gray-400 text-sm">Dengan berlangganan, Anda menyetujui <a href="#"
-              class="text-primary hover:underline">kebijakan privasi</a> kami.</p>
+
+          <p class="text-gray-400 text-sm">
+            Dengan berlangganan, Anda menyetujui
+            <a href="#" class="text-primary hover:underline">kebijakan privasi</a> kami.
+          </p>
+
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 ZenCool. Hak Cipta Dilindungi.</p>
+          </div>
         </div>
       </div>
-      <div class="border-t border-gray-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 ZenCool. Hak Cipta Dilindungi.</p>
-        </div>
-      </div>
-    </div>
     </div>
   </footer>
   <script src="script.js"></script>
